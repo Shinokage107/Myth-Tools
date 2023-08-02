@@ -1,5 +1,5 @@
 bl_info = {
-    "name" : "Myth Tools",
+    "name" : "Myth Tools-0.7.0",
     "author" : "Shino Mythmaker (Alexander Braun)", 
     "description" : "Supportive plugin that combines Rig control and Export of FFXIV Poses.",
     "blender" : (3, 6, 0),
