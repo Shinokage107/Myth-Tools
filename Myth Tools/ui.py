@@ -41,22 +41,22 @@ class MPH_RigLayers(bpy.types.Panel):
         col = layout.column()
         
         row = col.row()
-        row.prop(context.active_object.data, 'layers', index=0, toggle=True, text='Essential')
+        row.prop(context.active_object.data.collections['Layer 1'], 'is_visible', toggle=True, text='Essential')
 
         row = col.row()
-        row.prop(context.active_object.data, 'layers', index=1, toggle=True, text='Face')
-        row.prop(context.active_object.data, 'layers', index=2, toggle=True, text='Hands')
+        row.prop(context.active_object.data.collections['Layer 2'], 'is_visible', toggle=True, text='Face')
+        row.prop(context.active_object.data.collections['Layer 3'], 'is_visible', toggle=True, text='Hands')
         
         row = col.row()
-        row.prop(context.active_object.data, 'layers', index=7, toggle=True, text='Tail')
-        row.prop(context.active_object.data, 'layers', index=23, toggle=True, text='Ears')
+        row.prop(context.active_object.data.collections['Layer 8'], 'is_visible', toggle=True, text='Tail')
+        row.prop(context.active_object.data.collections['Layer 24'], 'is_visible', toggle=True, text='Ears')
 
         row = col.row()
-        row.prop(context.active_object.data, 'layers', index=4, toggle=True, text='ClothR')
-        row.prop(context.active_object.data, 'layers', index=5, toggle=True, text='ClothL')
+        row.prop(context.active_object.data.collections['Layer 5'], 'is_visible', toggle=True, text='ClothR')
+        row.prop(context.active_object.data.collections['Layer 6'], 'is_visible', toggle=True, text='ClothL')
         
         row = col.row()
-        row.prop(context.active_object.data, 'layers', index=16, toggle=True, text='Adjuster')   
+        row.prop(context.active_object.data.collections['Layer 17'], 'is_visible', toggle=True, text='Adjuster')   
 
 class MPH_RigCollection(bpy.types.Panel):
     bl_label = 'Rig Collection'
@@ -204,7 +204,7 @@ class MPH_Utils(bpy.types.Panel):
         layout.operator("mph.purge_orphans", text="Clean Up File", icon = "FILE_BACKUP")
             
 class MPH_ShamelessPlug(bpy.types.Panel):
-    bl_label = 'Myth Tools 0.7.0'
+    bl_label = 'Myth Tools 0.7.2'
     bl_idname = 'MPH_PT_Plug'
     bl_space_type = 'VIEW_3D'
     bl_region_type = 'UI'

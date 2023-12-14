@@ -2,8 +2,8 @@ bl_info = {
     "name" : "Myth Tools",
     "author" : "Shino Mythmaker", 
     "description" : "Supportive plugin that combines Rig control and Export of FFXIV Poses.",
-    "blender" : (3, 6, 0),
-    "version" : (0, 7, 0),
+    "blender" : (4, 0, 0),
+    "version" : (0, 7, 2),
     "category" : "3D View" 
 }
 
